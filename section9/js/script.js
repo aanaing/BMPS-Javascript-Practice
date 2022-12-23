@@ -134,20 +134,20 @@ const restaurant = {
 
 //---------------- optional chaning and nullish operators ------------
 
-const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-for (const day of days) {
-  const time = restaurant.openingHours[day]?.open ?? "close";
-  //console.log(time);
-  //console.log(`we open at ${time} hours on the ${day} `);
+// const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// for (const day of days) {
+//   const time = restaurant.openingHours[day]?.open ?? "close";
+//   //console.log(time);
+//   //console.log(`we open at ${time} hours on the ${day} `);
 
-  //console.log(Object.values(days));
+//   //console.log(Object.values(days));
 
-  // console.log(result);
-}
-const obj = Object.keys(days);
-console.log(obj);
-console.log(Object.values(days));
-console.log(Object.entries(days));
+//   // console.log(result);
+// }
+// const obj = Object.keys(days);
+// console.log(obj);
+// console.log(Object.values(days));
+// console.log(Object.entries(days));
 
 // function
 //console.log(restaurant.orders?.(1, 2) ?? "method does not exist");
@@ -188,16 +188,76 @@ console.log(Object.entries(days));
 
 /// -------------- String part 1  -----------------
 // - same as array but start index of 1 not 0
-const airline = "Air way myanmar";
-const plane = "A320";
-console.log(airline[0]); //''
-console.log(airline[1]); //a
-console.log(airline[2]); //i
-console.log(airline[3]); //r
+// const airline = "Air way myanmar";
+// const plane = "A320";
+// console.log(airline[0]); //''
+// console.log(airline[1]); //a
+// console.log(airline[2]); //i
+// console.log(airline[3]); //r
 
-console.log(airline.lastIndexOf("a")); //13
-console.log(airline.length); //15
-console.log(airline.slice(4, 7)); //way
-console.log(airline.search("myanmar")); //8
-console.log(airline.slice(0, airline.indexOf("a"))); // air w
-console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+// console.log(airline.lastIndexOf("a")); //13
+// console.log(airline.length); //15
+// console.log(airline.slice(4, 7)); //way
+// console.log(airline.search("myanmar")); //8
+// console.log(airline.slice(0, airline.indexOf("a"))); // air w
+// console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+
+// ---------------- Coding challange 3 -------------------
+// const gameEvent = new Map([
+//   [17, "Goal"],
+//   [36, "substitution"],
+//   [18, "Goal"],
+//   [47, "substitution"],
+//   [61, "yellow card"],
+//   [64, "red card"],
+//   [69, "substitution"],
+//   [70, "substitution"],
+//   [19, "Goal"],
+//   [12, "Goal"],
+//   [92, "yellow card"],
+// ]);
+// //console.log(gameEvent);
+
+// // 1
+// const events = [...new Set(gameEvent.values())];
+// console.log(events);
+
+// // 2
+// const remove = gameEvent.delete(64);
+// console.log(remove);
+// console.log(gameEvent);
+
+// // 3
+// const times = [...gameEvent.keys()].pop(); // get the latest item[92, "yellow card"]
+// console.log(times);
+// console.log(`An event occour every ${times / gameEvent.size} minutes.`);
+
+// //4
+// for (const [min, event] of gameEvent) {
+//   const half = min < 45 ? "first half" : "second half";
+//   console.log(`${half} = ${min} : ${event}`);
+// }
+
+//------------String part 2
+
+// const string = "the passenger come to opening door and come to opening door";
+// const repString = string.replace(/door/g, "gate");
+// console.log(repString); //the passenger come to opening gate and come to opening
+
+// aaaaaaaaaaaa_bbbbbb;
+// cccccc_aaaaaa;
+// ggggggg_cbbBBI;
+// gggIO_Cei;
+
+// document.body.append(document.createElement("textarea"));
+// document.body.append(document.createElement("button"));
+
+// document.querySelector("button").addEventListener("click", function () {
+//   const text = document.querySelector("textarea").value.split("\n");
+
+//   for (const [a, row] of text.entries()) {
+//     const [i, j] = row.toLowerCase().trim().split("_");
+//     const output = `${i}${j.replace(j[0], j[0].toUpperCase())}`;
+//     console.log(`${output.padEnd(20)}${"*".repeat(a + 1)}`);
+//   }
+// });
